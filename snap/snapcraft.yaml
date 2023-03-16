@@ -18,7 +18,7 @@ architectures:
 
 apps:
   xdm-snap:
-    command: usr/bin/xdman
+    command: opt/xdman/xdm-app
     daemon: simple
     extensions: [gnome]
     common-id: org.xdm.snap
