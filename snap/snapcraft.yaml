@@ -43,22 +43,23 @@ apps:
       
 parts:
   xdm-snap:
-    source: https://github.com/subhra74/xdm.git
-    plugin: autotools
-    autotools-configure-parameters:
-      - --prefix=/usr
+    source: https://github.com/subhra74/xdm-experimental-binaries.git
+    plugin: dump
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags)
       VER="$(git ls-remote --tags https://github.com/subhra74/xdm.git | \
            sed 's;^.*/v;;' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -1)"
-           curl -LO https://github.com/subhra74/xdm/releases/download/v${VER}/xdm-setup-${VER}.tar.xz 
-   
+           curl -LO https://github.com/subhra74/xdm-experimental-binaries/releases/download/v${VER}/xdm_gtk_${VER}.amd64.deb 
+  #https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
     build-packages:
       - curl
       - build-essential
       - make
       - git
+      - debianutils
+      - debian-goodies
+      - debhelper
       - autotools-dev
       - automake
       - autoconf
