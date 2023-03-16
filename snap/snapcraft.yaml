@@ -18,7 +18,8 @@ architectures:
 
 apps:
   xdm-snap:
-    command: opt/xdman/xdman
+    command: usr/bin/xdman
+    daemon: simple
     extensions: [gnome]
     common-id: org.xdm.snap
     environment:
@@ -43,15 +44,16 @@ apps:
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm.git
-    plugin: nil   
+    plugin: autotools
+    autotools-configure-parameters:
+      - --prefix=/usr
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags)
-    #VER="$(git ls-remote --tags https://github.com/subhra74/xdm.git | \
-    #sed 's;^.*/v;;' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -1)"
-    #curl -LO https://github.com/subhra74/xdm/releases/download/v${VER}/xdm-setup-${VER}.tar.xz 
-    #https://github.com/transmission/transmission/releases/download/v${VER}/transmission-${VER}.tar.xz
-    #https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz 
+      VER="$(git ls-remote --tags https://github.com/subhra74/xdm.git | \
+           sed 's;^.*/v;;' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -1)"
+           curl -LO https://github.com/subhra74/xdm/releases/download/v${VER}/xdm-setup-${VER}.tar.xz 
+   
     build-packages:
       - curl
       - build-essential
@@ -64,13 +66,7 @@ parts:
       - libtool
       - libtool-bin
           
-    override-build:
-      craftctl default
-      curl -LO https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz 
-      tar xf xdm-setup-7.2.11.tar.xz
-      cd xdm-setup-7.2.11.tar
-      ./install.sh 
-      
+  
       
     
        
