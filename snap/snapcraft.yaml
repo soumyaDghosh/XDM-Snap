@@ -56,8 +56,7 @@ parts:
       - debianutils
       - debian-goodies
       - debhelper
-      - apt
-      - dpkg
+      - zstd
       - autotools-dev
       - automake
       - autoconf
