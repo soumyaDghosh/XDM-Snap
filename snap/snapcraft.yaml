@@ -44,14 +44,13 @@ apps:
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm-experimental-binaries.git
-    plugin: dump
+    plugin: nil
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags)
-      curl -LO https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
-   #VER="$(git ls-remote --tags https://github.com/subhra74/xdm.git | \
-   #sed 's;^.*/v;;' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -1)"
-   #curl -LO https://github.com/subhra74/xdm-experimental-binaries/releases/download/v${VER}/xdm_gtk_${VER}.amd64.deb 
+      VER="$(git ls-remote --tags https://github.com/subhra74/xdm.git | \
+           sed 's;^.*/v;;' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -1)"
+      curl -LO https://github.com/subhra74/xdm-experimental-binaries/releases/download/v${VER}/xdm_gtk_${VER}.amd64.deb 
    #https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
     build-packages:
       - curl
@@ -61,13 +60,17 @@ parts:
       - debianutils
       - debian-goodies
       - debhelper
+      - apt
+      - dpkg
       - autotools-dev
       - automake
       - autoconf
       - autopoint
       - libtool
       - libtool-bin
-          
+    override-build:
+      craftctl default
+      apt install xdman_gtk_8.0.25_amd64.deb    
   
       
     
