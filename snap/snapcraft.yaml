@@ -18,7 +18,7 @@ layout:
 
 apps:
   xdm-snap:
-    command: xdm/usr/bin/xdman
+    command: xdman
     extensions: [gnome]
     common-id: org.xdm.snap
     environment:
@@ -40,22 +40,17 @@ apps:
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm.git   
-    plugin: nil
+    plugin: dump
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags) 
-      curl -LO https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz
       
     build-packages:
       - curl
       - build-essential
       - git
       
-    override-build: |
-      craftctl default
-      ./install.sh --prefix=/$CRAFT_PART_INSTALL
-      
-      
+    
       
       
       
