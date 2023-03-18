@@ -18,7 +18,7 @@ layout:
 
 apps:
   xdm-snap:
-    command: usr/bin/xdman
+    command: xdm/usr/bin/xdman
     extensions: [gnome]
     common-id: org.xdm.snap
     environment:
