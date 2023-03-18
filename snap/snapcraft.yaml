@@ -57,7 +57,7 @@ parts:
       tar -xf xdm-setup-7.2.11.tar.xz -C $CRAFT_PART_INSTALL/xdm/
       cd $CRAFT_PART_INSTALL/xdm/ 
       ./install.sh --prefix=/usr
-       $CRAFT_PART_INSTALL/xdm
+      $CRAFT_PART_INSTALL/xdm
       
       
     
