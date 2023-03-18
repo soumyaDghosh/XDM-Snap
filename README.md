@@ -1,2 +1,3 @@
 # XDM-Snap
-Snap Builds of XDM Linux
+Snap Builds of Experimental version of XDM Linux...
+
