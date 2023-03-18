@@ -40,11 +40,7 @@ apps:
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz 
-    plugin: dump
-    override-pull: |
-      craftctl default
-      craftctl set version=$(git describe --tags) 
-      
+    plugin: dump   
     build-packages:
       - curl
       - build-essential
