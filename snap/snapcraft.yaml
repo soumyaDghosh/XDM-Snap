@@ -43,7 +43,14 @@ apps:
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm-experimental-binaries.git    
-    plugin: nil  
+    plugin: dump  
+    override-pull: |
+      craftctl default
+      craftctl set version=$(git describe --tags) 
+      VER=$(git describe --tags)
+      curl -LO https://github.com/subhra74/xdm-experimental-binaries/releases/download/${VER}/xdman_gtk_${VER}_amd64.deb
+  #https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/tags/${VER}.tar.gz
+  #https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
     build-packages:
       - curl
       - build-essential
