@@ -50,7 +50,7 @@ parts:
       craftctl default
       mkdir -p $SNAPCRAFT_PART_INSTALL/opt
       ./install.sh
-      $SNAPCRAFT_PART_INSTALL/opt
+      $SNAPCRAFT_PART_INSTALL/opt/xdman/*
       
       
       
