@@ -1,6 +1,6 @@
 name: xdm-snap
 base: core22
-version: 'Latest'
+version: '7.2.11'
 summary: XDM Is Free and Advanced Download Manger for Linux
 description: |
   XDM Is a powerful Free and Advanced Download Manger For Linux supporting several filetypes and contents..
@@ -36,11 +36,6 @@ parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz 
     plugin: dump  
-    build-packages:
-      - curl
-      - build-essential
-      - git
-      
     override-build: |
       set -eu
       craftctl default
