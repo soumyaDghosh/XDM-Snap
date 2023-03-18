@@ -36,10 +36,7 @@ apps:
       - removable-media
       - unity7
       - screen-inhibit-control
-      
- 
- 
-      
+            
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm.git   
