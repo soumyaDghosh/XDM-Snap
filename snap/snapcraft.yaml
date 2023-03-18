@@ -13,12 +13,12 @@ architectures:
     build-for: amd64
     
 layout:
-  /usr/bin/xdman:
-    symlink: $SNAP/opt/xdman/xdman
+  /usr/xdman/xdman:
+    symlink: $SNAP/usr/xdman/xdman
 
 apps:
   xdm-snap:
-    command: usr/bin/xdman
+    command: usr/xdman/xdman
     extensions: [gnome]
     common-id: org.xdm.snap
     environment:
@@ -50,8 +50,8 @@ parts:
       craftctl default
       mkdir -p $SNAPCRAFT_PART_INSTALL/opt
       ./install.sh
-      $SNAPCRAFT_PART_INSTALL/opt/xdman/*
-      
+      mv $SNAPCRAFT_PART_INSTALL/opt/xdman $SNAPCRAFT_PART_INSTALL/usr
+      $SNAPCRAFT_PART_INSTALL/usr/xdman
       
       
       
