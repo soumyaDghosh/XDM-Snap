@@ -15,9 +15,11 @@ architectures:
 
 apps:
   xdm-snap:
-    command: opt/xdman/xdman
+    command: opt/xdman/xdm-app
     extensions: [gnome]
     common-id: org.xdm.snap
+    environment:
+      GTK_USE_PORTAL: 1
     plugs:
       - home
       - audio-playback
@@ -34,12 +36,11 @@ apps:
             
 parts:
   xdm-snap:
-    source: https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz 
+    source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
     plugin: dump  
     override-build: |
       set -eu
       craftctl default
-      ./install.sh
       rm -rf usr/bin/xdman
      
       
