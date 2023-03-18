@@ -13,16 +13,16 @@ architectures:
     build-for: amd64
     
 layout:
-  /opt/xdman/xdm-app:
-    symlink: $SNAP/opt/xdman/xdm-app
+  /opt/xdman/xdman:
+    symlink: $SNAP/opt/xdman/xdman
 
 apps:
   xdm-snap:
-    command: usr/bin/xdman
+    command: opt/xdman/xdman
     extensions: [gnome]
     common-id: org.xdm.snap
-    #environment:
-            #GTK_USE_PORTAL: 1
+    environment:
+            GTK_USE_PORTAL: 1
     plugs:
       - home
       - audio-playback
@@ -42,26 +42,22 @@ apps:
       
 parts:
   xdm-snap:
-    source: https://github.com/subhra74/xdm-experimental-binaries.git    
+    source: https://github.com/subhra74/xdm.git   
     plugin: dump
-    #source-type: deb
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags) 
       VER=$(git describe --tags)
-      curl -LO https://github.com/subhra74/xdm-experimental-binaries/releases/download/${VER}/xdman_gtk_${VER}_amd64.deb
-  #https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/tags/${VER}.tar.gz
-  #https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
+      curl -LO https://github.com/subhra74/xdm/releases/download/${VER}/xdm-setup-${VER}.tar.xz
+  
     build-packages:
       - curl
       - build-essential
       - git
-      - gdebi
-      - dpkg
-      - dpkg-sig
-      - apt
-      - apt-utils
-      
+
+    overide-build: |
+      craftctl default
+      ./install.sh
    
       
    
