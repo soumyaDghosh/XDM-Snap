@@ -40,15 +40,17 @@ apps:
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz 
-    plugin: dump   
+    plugin: nil  
     build-packages:
       - curl
       - build-essential
       - git
       
-    override-prime: |
+    override-build: |
       craftctl default
-      ./install.sh 
+      mkdir -p $SNAPCRAFT_PART_INSTALL/opt
+      ./install.sh
+      $SNAPCRAFT_PART_INSTALL/opt
       
       
       
