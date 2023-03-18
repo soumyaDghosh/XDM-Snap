@@ -40,17 +40,20 @@ apps:
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm.git   
-    plugin: autotools
+    plugin: nil
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags) 
+      curl -LO https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz
       
     build-packages:
       - curl
       - build-essential
       - git
       
-    
+    override-build: |
+      craftctl default
+      ./install.sh --prefix=/usr DESTDIR=${SNAPCRAFT_PART_INSTALL}
       
       
       
