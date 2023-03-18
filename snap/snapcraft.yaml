@@ -51,6 +51,7 @@ parts:
       mkdir -p $SNAPCRAFT_PART_INSTALL/opt
       ./install.sh
       mv $SNAPCRAFT_PART_INSTALL/opt/xdman $SNAPCRAFT_PART_INSTALL/usr
+      find $SNAPCRAFT_PART_INSTALL/usr/bin -name xdman | xargs rm -rf
       $SNAPCRAFT_PART_INSTALL/usr/xdman
       
       
