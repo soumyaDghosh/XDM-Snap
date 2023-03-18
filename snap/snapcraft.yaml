@@ -54,10 +54,7 @@ parts:
       - git
       - zstd
       
-    override-build: |
-      craftctl default
-      tar -xf xdman_gtk-8.0.25-1-x86_64.pkg.tar.zst
-      $CRAFT_PART_INSTALL/opt/xdman
+   
   
   
       
