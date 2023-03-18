@@ -19,7 +19,6 @@ layout:
 apps:
   xdm-snap:
     command: opt/xdman/xdm-app
-    daemon: simple
     extensions: [gnome]
     common-id: org.xdm.snap
     environment:
@@ -52,19 +51,10 @@ parts:
     build-packages:
       - curl
       - build-essential
-      - make
       - git
-      - debianutils
-      - debian-goodies
-      - debhelper
       - zstd
-      - autotools-dev
-      - automake
-      - autoconf
-      - autopoint
-      - libtool
-      - libtool-bin
-    override-build:
+      
+    override-build: |
       craftctl default
       tar -xf xdman_gtk-8.0.25-1-x86_64.pkg.tar.zst
       cd xdman_gtk-8.0.25-1-x86_64.pkg.tar
