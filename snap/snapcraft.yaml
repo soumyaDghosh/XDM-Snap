@@ -52,10 +52,7 @@ parts:
       - build-essential
       - git
 
-    override-build: |
-      craftctl default
-      ./install.sh
-   
+    
       
    
   
