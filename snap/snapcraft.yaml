@@ -44,7 +44,7 @@ parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm-experimental-binaries.git    
     plugin: dump
-    source-type: deb
+    #source-type: deb
     override-pull: |
       craftctl default
       craftctl set version=$(git describe --tags) 
