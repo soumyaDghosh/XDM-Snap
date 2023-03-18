@@ -12,13 +12,10 @@ architectures:
   - build-on: amd64
     build-for: amd64
     
-layout:
-  /usr/xdman/xdman:
-    symlink: $SNAP/usr/xdman/xdman
 
 apps:
   xdm-snap:
-    command: usr/xdman/xdman
+    command: opt/xdman/xdman
     extensions: [gnome]
     common-id: org.xdm.snap
     plugs:
