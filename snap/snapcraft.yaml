@@ -57,7 +57,6 @@ parts:
     override-build: |
       craftctl default
       tar -xf xdman_gtk-8.0.25-1-x86_64.pkg.tar.zst
-      cd xdman_gtk-8.0.25-1-x86_64.pkg.tar
       $CRAFT_PART_INSTALL/opt/xdman
   
   
