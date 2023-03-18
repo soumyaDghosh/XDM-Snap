@@ -53,7 +53,7 @@ parts:
       
     override-build: |
       craftctl default
-      ./install.sh --prefix=/usr DESTDIR=${SNAPCRAFT_PART_INSTALL}
+      ./install.sh --prefix=$CRAFT_PART_INSTALL
       
       
       
