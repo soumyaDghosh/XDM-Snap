@@ -55,7 +55,11 @@ parts:
       - curl
       - build-essential
       - git
-      - zstd
+      - gdebi
+      
+    override-build: |
+      craftctl default
+      gdebi xdman_gtk_8.0.18-beta_amd64.deb
       
    
   
