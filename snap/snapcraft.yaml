@@ -43,11 +43,7 @@ apps:
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm-experimental-binaries.git    
-    plugin: nil 
-    override-pull: |
-      craftctl default
-      curl -LO https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk-8.0.25-1-x86_64.pkg.tar.zst
-    
+    plugin: nil  
     build-packages:
       - curl
       - build-essential
