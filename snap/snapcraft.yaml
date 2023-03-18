@@ -21,8 +21,6 @@ apps:
     command: usr/xdman/xdman
     extensions: [gnome]
     common-id: org.xdm.snap
-    environment:
-            GTK_USE_PORTAL: 1
     plugs:
       - home
       - audio-playback
@@ -40,19 +38,18 @@ apps:
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm/releases/download/7.2.11/xdm-setup-7.2.11.tar.xz 
-    plugin: nil  
+    plugin: dump  
     build-packages:
       - curl
       - build-essential
       - git
       
     override-build: |
+      set -eu
       craftctl default
-      #mkdir -p $SNAPCRAFT_PART_INSTALL/opt
       ./install.sh
-      mv $SNAPCRAFT_PART_INSTALL/opt/xdman $SNAPCRAFT_PART_INSTALL/usr
-      find $SNAPCRAFT_PART_INSTALL/usr/bin -name xdman | xargs rm -rf
-      $SNAPCRAFT_PART_INSTALL/usr/xdman
+      rm -rf usr/bin/xdman
+     
       
       
       
