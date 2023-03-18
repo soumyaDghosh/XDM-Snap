@@ -56,10 +56,14 @@ parts:
       - build-essential
       - git
       - gdebi
+      - dpkg
+      - dpkg-sig
+      - apt
+      - apt-utils
       
     override-build: |
       craftctl default
-      gdebi xdman_gtk_8.0.18-beta_amd64.deb
+      dpkg -i xdman_gtk_8.0.18-beta_amd64.deb
       
    
   
