@@ -16,11 +16,11 @@ package-repositories:
   - type: apt
     ppa: tomtomtom/yt-dlp   
           
-slots:
-  xdman-snap:
-    interface: dbus
-    bus: session
-    name: com.github.cc21.xdman        
+#slots: (Currently DBUS isnt needed)
+  #xdman-snap:
+    #interface: dbus
+    #bus: session
+    #name: com.github.cc21.xdman        
         
 apps:
   xdm-snap:
@@ -31,7 +31,6 @@ apps:
       GTK_USE_PORTAL: 1
     plugs:
       - home
-      - audio-playback
       - network-status
       - network
       - network-bind
