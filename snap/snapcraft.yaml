@@ -47,7 +47,7 @@ parts:
     override-pull: |
       set -eu
       craftctl default
-      rm -rf usr/bin/xdman
+      rm -rf usr/bin/xdman usr/share/applications/xdm-app.desktop
      
     stage-packages:
       - yt-dlp
