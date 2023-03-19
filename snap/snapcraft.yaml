@@ -54,12 +54,7 @@ parts:
      
     stage-packages:
       - yt-dlp
-      - liblttng-ust-ctl5
-      - liblttng-ust-common1
-      - liblttng-ust1
-      - liblttng-ust-python-agent1
-      
-      
+     
   xdm:
     source: https://github.com/subhra74/xdm-experimental-binaries.git
     plugin: nil
