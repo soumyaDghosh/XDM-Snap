@@ -58,7 +58,6 @@ parts:
       - curl
       - wget
       - aria2
-      - axel
       - libaria2-0
      
   
