@@ -50,7 +50,7 @@ parts:
     plugin: dump
     stage-packages:
       - hicolor-icon-theme
-      - ytdlp
+      - yt-dlp
       
     
       
