@@ -60,8 +60,6 @@ parts:
       - curl
       - wget
       - aria2
-      - liblttng-ust-common1
-      - liblttng-ust-ctl5
       - hicolor-icon-theme
       - liblttng-ust1
     
