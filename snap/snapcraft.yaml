@@ -11,7 +11,12 @@ compression: lzo
 architectures:
   - build-on: amd64
     build-for: amd64
-    
+
+plugs:
+  shmem:
+    interface: shared-memory
+    private: true
+
         
 apps:
   xdm-snap:
@@ -21,9 +26,8 @@ apps:
     environment:
       GTK_USE_PORTAL: 1
       TMPDIR: $XDG_RUNTIME_DIR
-      
-    
     plugs:
+      - shmem
       - home
       - network-status
       - network
