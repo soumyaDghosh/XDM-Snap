@@ -20,7 +20,7 @@ layout:
   /opt/xdman/xdm-app:
      symlink: $SNAP/usr/bin
      symlink: $SNAP/usr/share
-     symlink: $SNAP/usr/lin
+     symlink: $SNAP/usr/lib
   
      
           
