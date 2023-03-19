@@ -12,11 +12,6 @@ architectures:
   - build-on: amd64
     build-for: amd64
     
-package-repositories:
-  - type: apt
-    ppa: tomtomtom/yt-dlp   
-    
-
         
 apps:
   xdm-snap:
@@ -25,6 +20,7 @@ apps:
     common-id: org.xdm.snap 
     environment:
       GTK_USE_PORTAL: 1
+      TMPDIR: $XDG_RUNTIME_DIR
       
     
     plugs:
@@ -50,8 +46,11 @@ parts:
     plugin: dump
     stage-packages:
       - hicolor-icon-theme
-      - yt-dlp
-      
+    
+    stage-snaps:
+      - latest/stable/yt-dlp
+      - latest/edge/ffmpeg
+      - latest/edge/curl
     
       
      
