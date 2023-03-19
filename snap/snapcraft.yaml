@@ -57,12 +57,8 @@ parts:
       rm -rf usr/bin/xdman usr/share/applications/xdm-app.desktop
      
     stage-packages:
-      - yt-dlp
-      - curl
-      - wget
-      - aria2
       - hicolor-icon-theme
-      - liblttng-ust1
+      
     
       
      
