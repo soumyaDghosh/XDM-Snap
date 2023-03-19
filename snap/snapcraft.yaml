@@ -32,7 +32,6 @@ apps:
     plugs:
       - home
       - audio-playback
-      - gsettings
       - network-status
       - network
       - network-bind
