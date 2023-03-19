@@ -18,11 +18,8 @@ package-repositories:
     
 layout:
   /opt/xdman/xdm-app:
-     symlink: $SNAP/usr/lib
-  /opt/xdman/xdm-app:
-     symlink: $SNAP/usr/bin
-  /opt/xdman/xdm-app:
-     symlink: $SNAP/usr/share
+     symlink: $SNAP/usr
+  
      
           
 #slots: (Currently DBUS isnt needed)
