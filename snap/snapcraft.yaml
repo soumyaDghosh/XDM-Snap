@@ -12,10 +12,15 @@ architectures:
   - build-on: amd64
     build-for: amd64
     
+package-repositories:
+  - type: apt
+    ppa: tomtomtom/yt-dlp   
+    
 
 apps:
   xdm-snap:
     command: opt/xdman/xdm-app
+    daemon: simple
     extensions: [gnome]
     common-id: org.xdm.snap
     environment:
@@ -27,6 +32,7 @@ apps:
       - network-status
       - network
       - network-bind
+      - network-observe
       - raw-usb
       - optical-drive
       - network-status
@@ -43,7 +49,8 @@ parts:
       craftctl default
       rm -rf usr/bin/xdman
      
-      
+    stage-packages:
+      - yt-dlp
       
       
       
