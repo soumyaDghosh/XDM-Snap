@@ -15,11 +15,7 @@ architectures:
 package-repositories:
   - type: apt
     ppa: tomtomtom/yt-dlp   
-    
-layout:
-  /opt/xdman/xdm-app:
-    symlink: $SNAP/usr
-    
+        
 apps:
   xdm-snap:
     command: opt/xdman/xdm-app
