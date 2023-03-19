@@ -4,7 +4,6 @@ Type=Application
 Terminal=false
 Exec=xdm-snap %U
 Name=XDM-Snap
-Comment=Xtreme Download Manager
 Comment=Powerfull download accelarator and video downloader
 Categories=Network;
 MimeType=application/xdm-app;x-scheme-handler/xdm-app;
