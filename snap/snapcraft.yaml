@@ -48,6 +48,11 @@ parts:
      
     stage-packages:
       - yt-dlp
+      - curl
+      - wget
+      - aria2
+      - axel
+      - libaria2-0
      
   #xdm:
     #source: https://github.com/subhra74/xdm-experimental-binaries.git
