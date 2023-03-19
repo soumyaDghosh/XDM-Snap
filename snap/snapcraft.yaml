@@ -16,10 +16,7 @@ package-repositories:
   - type: apt
     ppa: tomtomtom/yt-dlp   
     
-layout:
-  /opt/xdman/xdm-app:
-     symlink: $SNAP/usr
-    
+
         
 apps:
   xdm-snap:
@@ -58,6 +55,7 @@ parts:
      
     stage-packages:
       - hicolor-icon-theme
+      - ytdlp
       
     
       
