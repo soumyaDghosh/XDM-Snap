@@ -47,9 +47,7 @@ apps:
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
-    plugin: dump 
-    override-build: |
-    mkdir -p /downloads
+    plugin: dump
     stage-packages:
       - hicolor-icon-theme
       - ytdlp
