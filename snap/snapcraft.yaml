@@ -55,6 +55,7 @@ parts:
     stage-snaps:
       - yt-dlp/latest/stable
       - ffmpeg/latest/edge
+      - curl/latest/stable
       
     
       
