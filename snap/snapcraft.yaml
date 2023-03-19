@@ -1,6 +1,6 @@
 name: xdm-snap
 base: core22
-version: '8.0.25-beta'
+version: '8.0.25'
 summary: XDM Is Free and Advanced Download Manger for Linux
 description: |
   XDM Is a powerful Free and Advanced Download Manger For Linux supporting several filetypes and contents..
@@ -26,6 +26,8 @@ apps:
     environment:
       GTK_USE_PORTAL: 1
       TMPDIR: $XDG_RUNTIME_DIR
+      HOME: $SNAP_USER_COMMON
+      
     plugs:
       - shmem
       - home
@@ -54,8 +56,8 @@ parts:
     
     stage-snaps:
       - yt-dlp/latest/stable
-      - ffmpeg/latest/edge
-      - curl/latest/stable
+  
+    
       
     
       
