@@ -52,9 +52,9 @@ parts:
       - hicolor-icon-theme
     
     stage-snaps:
-      - latest/stable/yt-dlp
-      - latest/edge/ffmpeg
-      - latest/edge/curl
+      - yt-dlp/latest/stable
+      - ffmpeg/latest/edge
+      
     
       
      
