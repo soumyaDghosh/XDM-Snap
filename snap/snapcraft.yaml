@@ -62,7 +62,7 @@ parts:
       - aria2
       - liblttng-ust-common1
       - liblttng-ust-ctl5
-      - liblttng-ust-python-agent1
+      - hicolor-icon-theme
       - liblttng-ust1
     
       
