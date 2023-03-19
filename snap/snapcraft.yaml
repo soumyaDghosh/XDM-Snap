@@ -15,6 +15,12 @@ architectures:
 package-repositories:
   - type: apt
     ppa: tomtomtom/yt-dlp   
+          
+slots:
+  dbus:
+    interface: dbus
+    bus: session
+    name: com.ss.xdman        
         
 apps:
   xdm-snap:
