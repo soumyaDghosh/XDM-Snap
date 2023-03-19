@@ -15,6 +15,15 @@ architectures:
 package-repositories:
   - type: apt
     ppa: tomtomtom/yt-dlp   
+    
+layout:
+  /opt/xdman/xdm-app:
+     symlink: $SNAP/usr/lib
+  /opt/xdman/xdm-app:
+     symlink: $SNAP/usr/bin
+  /opt/xdman/xdm-app:
+     symlink: $SNAP/usr/share
+     
           
 #slots: (Currently DBUS isnt needed)
   #xdman-snap:
@@ -58,6 +67,11 @@ parts:
       - curl
       - wget
       - aria2
+      - liblttng-ust-common1
+      - liblttng-ust-ctl5
+      - liblttng-ust-python-agent1
+      - liblttng-ust1
+    
       
      
   
