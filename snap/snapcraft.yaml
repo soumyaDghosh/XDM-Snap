@@ -34,6 +34,7 @@ apps:
       - network-bind
       - network-observe
       - raw-usb
+      - process-control
       - browser-support
       - pulseaudio
       - audio-playback
