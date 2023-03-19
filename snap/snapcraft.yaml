@@ -29,6 +29,7 @@ apps:
     common-id: org.xdm.snap 
     environment:
       GTK_USE_PORTAL: 1
+      XDMAN_USER_DIR: $SNAP_USER_DATA
     plugs:
       - home
       - network-status
