@@ -17,10 +17,10 @@ package-repositories:
     ppa: tomtomtom/yt-dlp   
           
 slots:
-  dbus:
+  xdman-snap:
     interface: dbus
     bus: session
-    name: com.ss.xdman        
+    name: com.github.cc21.xdman        
         
 apps:
   xdm-snap:
@@ -42,7 +42,8 @@ apps:
       - removable-media
       - unity7
       - screen-inhibit-control
-            
+        
+    
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
