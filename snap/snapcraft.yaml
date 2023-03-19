@@ -1,6 +1,6 @@
 name: xdm-snap
 base: core22
-version: '8.0.25-beta'
+adopt-info: xdm
 summary: XDM Is Free and Advanced Download Manger for Linux
 description: |
   XDM Is a powerful Free and Advanced Download Manger For Linux supporting several filetypes and contents..
@@ -15,6 +15,10 @@ architectures:
 package-repositories:
   - type: apt
     ppa: tomtomtom/yt-dlp   
+    
+layout:
+   /opt/xdman/xdm-app:
+      symlink: $SNAP/opt/xdman/xdm-app
     
 
 apps:
@@ -51,6 +55,19 @@ parts:
      
     stage-packages:
       - yt-dlp
+      - liblttng-ust-ctl5
+      - liblttng-ust-common1
+      - liblttng-ust1
+      - liblttng-ust-python-agent1
+      
+      
+  xdm:
+    source: https://github.com/subhra74/xdm-experimental-binaries.git
+    plugin: nil
+    override-pull: |
+      craftctl default
+      craftctl set version=$(git describe --tags)
+      
       
       
       
