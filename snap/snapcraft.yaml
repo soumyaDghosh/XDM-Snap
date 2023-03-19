@@ -36,6 +36,9 @@ apps:
       - network-bind
       - network-observe
       - raw-usb
+      - browser-support
+      - pulseaudio
+      - audio-playback
       - optical-drive
       - network-status
       - removable-media
