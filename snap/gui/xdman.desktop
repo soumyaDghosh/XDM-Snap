@@ -6,5 +6,5 @@ Exec=xdm-snap %U
 Name=XDM-Snap
 Comment=Powerfull download accelarator and video downloader
 Categories=Network;
-MimeType=x-scheme-handler/xdm+app;
+MimeType=application/xdm-app;x-scheme-handler/xdm-app;
 Icon=${SNAP}/meta/gui/xdman.svg
