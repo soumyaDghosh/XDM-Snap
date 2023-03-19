@@ -18,9 +18,8 @@ package-repositories:
     
 layout:
   /opt/xdman/xdm-app:
-     symlink: $SNAP/usr/bin
-     symlink: $SNAP/usr/share
-     symlink: $SNAP/usr/lib
+     symlink: $SNAP/usr
+     
   
      
           
