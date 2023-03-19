@@ -61,13 +61,7 @@ parts:
       - axel
       - libaria2-0
      
-  #xdm:
-    #source: https://github.com/subhra74/xdm-experimental-binaries.git
-    #plugin: nil
-    #override-pull: |
-      #craftctl default
-      #craftctl set version=$(git describe --abbrev=0)
-      
+  
       
       
       
