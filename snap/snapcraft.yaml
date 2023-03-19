@@ -19,15 +19,7 @@ package-repositories:
 layout:
   /opt/xdman/xdm-app:
      symlink: $SNAP/usr
-     
-  
-     
-          
-#slots: (Currently DBUS isnt needed)
-  #xdman-snap:
-    #interface: dbus
-    #bus: session
-    #name: com.github.cc21.xdman        
+    
         
 apps:
   xdm-snap:
@@ -36,7 +28,6 @@ apps:
     common-id: org.xdm.snap 
     environment:
       GTK_USE_PORTAL: 1
-      XDMAN_USER_DIR: $SNAP_USER_DATA
     plugs:
       - home
       - network-status
