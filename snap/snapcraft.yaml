@@ -55,6 +55,8 @@ parts:
     stage-packages:
       - hicolor-icon-theme
       - glibc-source
+      - libc6
+      - libc6-amd64
      
     stage-snaps:
       - yt-dlp/latest/stable
