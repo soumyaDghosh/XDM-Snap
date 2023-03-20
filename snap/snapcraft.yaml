@@ -11,10 +11,18 @@ compression: lzo
 architectures:
   - build-on: amd64
     build-for: amd64
-    
+
 layout:
   /opt/xdman/xdm-app:
     symlink: $SNAP/opt/xdman/xdm-app
+    
+package-repositories:
+  - type: apt
+    url: https://packages.microsoft.com/ubuntu/22.04/prod
+    components: [main]
+    suites: [jammy]
+    key-id: BC528686B50D79E339D3721CEB3E94ADBE1229CF
+
 
 plugs:
   shmem:
@@ -54,12 +62,8 @@ parts:
       rm -rf /opt/xdman/xdm-app.desktop /usr/share/applications/xdm-app.desktop /usr/bin/xdman
     stage-packages:
       - hicolor-icon-theme
-      - glibc-source
-      - libc6
+      - dotnet-runtime-7.0
       - yt-dlp
-     
-    stage-snaps:
-      - dotnet-runtime-60/latest/stable
            
     
     
