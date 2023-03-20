@@ -50,6 +50,14 @@ parts:
     
     stage-snaps:
       - yt-dlp/latest/stable
+      
+    stage-packages:
+      - liblttng-ust1
+      - liblttng-ust-common1
+      
+    prime:
+      - opt/xdman/liblttng-ust1
+      - opt/xdman/liblttng-ust-common1
   
     
       
