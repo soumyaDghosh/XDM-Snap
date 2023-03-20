@@ -62,7 +62,7 @@ parts:
       rm -rf /opt/xdman/xdm-app.desktop /usr/share/applications/xdm-app.desktop /usr/bin/xdman
     stage-packages:
       - hicolor-icon-theme
-      - dotnet-runtime-7.0
+    #- dotnet-runtime-7.0
      
     stage-snaps:
       - yt-dlp/latest/stable
