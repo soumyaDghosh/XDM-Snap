@@ -53,15 +53,13 @@ parts:
       - hicolor-icon-theme
       - liblttng-ust1
       - liblttng-ust-common1
+      - curl
     
     stage-snaps:
       - yt-dlp/latest/stable
-      
+     
            
-    prime:
-      - opt/xdman/liblttng-ust1
-      - opt/xdman/liblttng-ust-common1
-  
+    
     
       
     
