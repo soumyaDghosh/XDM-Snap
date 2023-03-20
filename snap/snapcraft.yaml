@@ -51,11 +51,12 @@ parts:
     plugin: dump
     stage-packages:
       - hicolor-icon-theme
+      - liblttng-ust1
+      - liblttng-ust-common1
     
     stage-snaps:
       - yt-dlp/latest/stable
-      - liblttng-ust1
-      - liblttng-ust-common1
+      
            
     prime:
       - opt/xdman/liblttng-ust1
