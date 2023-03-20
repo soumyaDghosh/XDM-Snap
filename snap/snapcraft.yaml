@@ -11,6 +11,10 @@ compression: lzo
 architectures:
   - build-on: amd64
     build-for: amd64
+    
+layout:
+  /opt/xdman/xdm-app:
+    symlink: $SNAP/opt/xdman/xdm-app
 
 plugs:
   shmem:
@@ -50,11 +54,9 @@ parts:
     
     stage-snaps:
       - yt-dlp/latest/stable
-      
-    stage-packages:
       - liblttng-ust1
       - liblttng-ust-common1
-      
+           
     prime:
       - opt/xdman/liblttng-ust1
       - opt/xdman/liblttng-ust-common1
