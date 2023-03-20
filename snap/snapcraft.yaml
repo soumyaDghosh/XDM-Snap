@@ -55,15 +55,14 @@ apps:
     
 parts:
   xdm-snap:
-    source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
+    source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk-8.0.25-1-x86_64.pkg.tar.zst
     plugin: dump
     override-pull: |
       craftctl default
       rm -rf /opt/xdman/xdm-app.desktop /usr/share/applications/xdm-app.desktop /usr/bin/xdman
     stage-packages:
       - hicolor-icon-theme
-    #- dotnet-runtime-7.0
-     
+    
     stage-snaps:
       - yt-dlp/latest/stable
       - ffmpeg/latest/edge
