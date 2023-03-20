@@ -16,12 +16,12 @@ layout:
   /opt/xdman/xdm-app:
     symlink: $SNAP/opt/xdman/xdm-app
     
-package-repositories:
-  - type: apt
-    url: https://packages.microsoft.com/ubuntu/22.04/prod
-    components: [main]
-    suites: [jammy]
-    key-id: BC528686B50D79E339D3721CEB3E94ADBE1229CF
+#package-repositories:
+  #- type: apt
+    #url: https://packages.microsoft.com/ubuntu/22.04/prod
+    #components: [main]
+    #suites: [jammy]
+    #key-id: BC528686B50D79E339D3721CEB3E94ADBE1229CF
 
 
 plugs:
@@ -63,8 +63,11 @@ parts:
     stage-packages:
       - hicolor-icon-theme
       - dotnet-runtime-7.0
-      - yt-dlp
-           
+     
+    stage-snaps:
+      - yt-dlp/latest/stable
+      - ffmpeg/latest/edge
+      - curl/latest/stable
     
     
       
