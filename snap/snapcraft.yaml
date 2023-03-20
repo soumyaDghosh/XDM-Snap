@@ -57,9 +57,9 @@ parts:
       - glibc-source
       - libc6
       - libc6-amd64
+      - yt-dlp
      
     stage-snaps:
-      - yt-dlp/latest/stable
       - dotnet-runtime-60/latest/stable
            
     
