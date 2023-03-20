@@ -26,7 +26,8 @@ apps:
     environment:
       GTK_USE_PORTAL: 1
       TMPDIR: $XDG_RUNTIME_DIR
-      HOME: $SNAP_USER_COMMON
+      HOME: /home/$USER
+   #HOME: $SNAP_USER_COMMON
       
     plugs:
       - shmem
