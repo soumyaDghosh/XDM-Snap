@@ -49,14 +49,19 @@ apps:
     
 parts:
   xdm-snap:
-    source: https://github.com/CapeCrusader321/XDM-Snap/archive/refs/tags/8.0.25-beta.tar.gz
+    source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
     plugin: dump
     override-pull: |
       craftctl default
       rm -rf /opt/xdman/xdm-app.desktop /usr/share/applications/xdm-app.desktop /usr/bin/xdman
     stage-packages:
       - hicolor-icon-theme
+      - ffmpeg
       - yt-dlp
+      - curl
+  
+    stage-snaps:
+      - dotnet-runtime-60/latest/stable
    
     
     
