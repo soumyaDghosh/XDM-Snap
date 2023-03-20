@@ -56,12 +56,12 @@ parts:
       rm -rf /opt/xdman/xdm-app.desktop /usr/share/applications/xdm-app.desktop /usr/bin/xdman
     stage-packages:
       - hicolor-icon-theme
-      - ffmpeg
-      - yt-dlp
-      - curl
+      
   
     stage-snaps:
-      - dotnet-runtime-60/latest/stable
+      - yt-dlp/latest/stable
+      - curl/latest/stable
+      - ffmpeg/latest/edge
    
     
     
