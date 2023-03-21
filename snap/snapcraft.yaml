@@ -17,6 +17,10 @@ plugs:
     interface: shared-memory
     private: true
 
+layout:
+  /usr/bin/xdman:
+     symlink: $SNAP/opt/xdman
+
         
 apps:
   xdm-snap: 
