@@ -16,7 +16,7 @@ architectures:
 
 layout:
   /usr/bin/xdman:
-     symlink: $SNAP/opt/xdman
+     symlink: $SNAP/usr/bin/xdman
 
         
 apps:
