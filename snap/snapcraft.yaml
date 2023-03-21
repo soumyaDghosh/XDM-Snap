@@ -15,15 +15,15 @@ architectures:
 
 
 layout:
-  /usr/bin/xdman:
-     symlink: $SNAP/opt/xdman/xdm-app
+  /opt/xdman/xdm-app:
+     symlink: $SNAP_DATA/opt/xdman
      
      
 
         
 apps:
   xdm-snap: 
-    command: usr/bin/xdman
+    command: opt/xdman/xdm-app
     extensions: [gnome]
     common-id: org.xdm.snap 
     plugs:
