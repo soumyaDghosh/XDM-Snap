@@ -12,10 +12,7 @@ architectures:
   - build-on: amd64
     build-for: amd64    
 
-plugs:
-  shmem:
-    interface: shared-memory
-    private: true
+
 
 layout:
   /usr/bin/xdman:
@@ -28,7 +25,6 @@ apps:
     extensions: [gnome]
     common-id: org.xdm.snap 
     plugs:
-      - shmem
       - home
       - network-status
       - network
@@ -54,9 +50,7 @@ parts:
     stage-packages:
       - hicolor-icon-theme
    
-    stage-snaps:
-      - yt-dlp/latest/stable
-     
+  
     
    
     
