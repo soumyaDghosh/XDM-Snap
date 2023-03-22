@@ -20,7 +20,7 @@ layout:
             
 apps:
   xdm-snap: 
-    command: opt/xdman/xdm-app
+    command: chmod -v 755 opt/xdman/xdm-app
     extensions: [gnome-3-38]
     common-id: org.xdm.snap 
     plugs:
