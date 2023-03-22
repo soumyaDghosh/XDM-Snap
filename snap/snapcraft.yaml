@@ -12,11 +12,6 @@ architectures:
   - build-on: amd64
     build-for: amd64    
 
-
-layout:
-  /opt/xdman/xdm-app:
-     symlink: $SNAP_DATA/opt/xdman
-     
             
 apps:
   xdm-snap: 
