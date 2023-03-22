@@ -21,7 +21,7 @@ layout:
 apps:
   xdm-snap: 
     command: opt/xdman/xdm-app
-    extensions: [gnome]
+    extensions: [gnome-3-38]
     common-id: org.xdm.snap 
     plugs:
       - home
