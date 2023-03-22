@@ -1,5 +1,5 @@
 name: xdm-snap
-base: core22
+base: core20
 version: '8.0.25'
 summary: XDM Is Free and Advanced Download Manger for Linux
 description: |
@@ -10,17 +10,14 @@ compression: lzo
 
 architectures:
   - build-on: amd64
-    build-for: amd64    
-
+    run-on: amd64    
 
 
 layout:
   /opt/xdman/xdm-app:
      symlink: $SNAP_DATA/opt/xdman
      
-     
-
-        
+            
 apps:
   xdm-snap: 
     command: opt/xdman/xdm-app
@@ -41,14 +38,29 @@ apps:
       - removable-media
       - unity7
       - screen-inhibit-control
-        
+ 
+plugs:
+  gnome-3-38-2004:
+    default-provider: gnome-3-38-2004
+    interface: content
+    target: $SNAP/gnome-platform
+  gtk-3-themes:
+    default-provider: gtk-common-themes
+    interface: content
+    target: $SNAP/data-dir/themes
+  icon-themes:
+    default-provider: gtk-common-themes
+    interface: content
+    target: $SNAP/data-dir/icons
+  sound-themes:
+    default-provider: gtk-common-themes
+    interface: content
+    target: $SNAP/data-dir/sounds
     
 parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
     plugin: dump
-    override-pull: |
-      craftctl default
     stage-packages:
       - hicolor-icon-theme
    
