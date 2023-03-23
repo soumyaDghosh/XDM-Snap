@@ -16,7 +16,11 @@ layout:
   /opt/xdman/xdm-app:
     symlink: $SNAP/opt/xdman/xdm-app
    
-            
+plugs:
+  shmem:
+    interface: shared-memory
+    private: true
+    
 apps:
   xdm-snap: 
     command: opt/xdman/xdm-app
@@ -24,19 +28,14 @@ apps:
     common-id: org.xdm.snap 
     plugs:
       - home
-      - network-status
       - network
-      - network-bind
-      - network-observe
-      - raw-usb
+      - shmem
       - process-control
       - browser-support
       - pulseaudio
       - audio-playback
-      - optical-drive
       - removable-media
       - unity7
-      - screen-inhibit-control
  
 
 parts:
