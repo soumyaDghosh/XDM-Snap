@@ -10,8 +10,11 @@ compression: lzo
 
 architectures:
   - build-on: amd64
-    build-for: amd64    
-
+    build-for: amd64
+    
+layout:
+  /opt/xdman/xdm-app:
+    symlink: $SNAP/opt/xdman/xdm-app
             
 apps:
   xdm-snap: 
