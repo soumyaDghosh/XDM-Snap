@@ -15,9 +15,7 @@ architectures:
 layout:
   /opt/xdman/xdm-app:
     symlink: $SNAP/opt/xdman/xdm-app
-    symlink: $SNAP/usr
-    symlink: $SNAP/lib
-    
+   
             
 apps:
   xdm-snap: 
