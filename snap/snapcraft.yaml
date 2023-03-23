@@ -48,6 +48,11 @@ parts:
     stage-packages:
       - hicolor-icon-theme
       - wget
+      - curl
+      - libnettle8
+      - libcrypto++8
+      - libhogweed6
+      - libx264-163
     stage-snaps:
       - ffmpeg/latest/edge
       - yt-dlp/latest/stable
