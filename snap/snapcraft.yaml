@@ -41,6 +41,8 @@ parts:
     plugin: dump
     stage-packages:
       - hicolor-icon-theme
+      - ffmpeg
+      - yt-dlp
    
   
     
