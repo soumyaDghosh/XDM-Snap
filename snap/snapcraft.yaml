@@ -15,6 +15,11 @@ architectures:
 layout:
   /opt/xdman/xdm-app:
     symlink: $SNAP/opt/xdman/xdm-app
+  /usr:
+    symlink: $SNAP/opt/xdman/xdm-app
+  /lib:
+    symlink: $SNAP/opt/xdman/xdm-app
+    
             
 apps:
   xdm-snap: 
@@ -44,8 +49,11 @@ parts:
     plugin: dump
     stage-packages:
       - hicolor-icon-theme
-      - ffmpeg
-      - yt-dlp
+      - wget
+    stage-snaps:
+      - ffmpeg/latest/edge
+      - yt-dlp/latest/stable
+      
    
   
     
