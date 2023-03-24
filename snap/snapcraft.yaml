@@ -16,7 +16,9 @@ package-repositories:
   - type: apt
     ppa: tomtomtom/yt-dlp
 
-
+layout:
+   /opt/xdman/xdm-app:
+     symlink: $SNAP/usr
 
 plugs:
   shmem:
