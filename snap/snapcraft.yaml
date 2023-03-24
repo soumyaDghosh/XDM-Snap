@@ -18,8 +18,8 @@ package-repositories:
 
 layout:
    /opt/xdman/xdm-app:
-     symlink: $SNAP/opt/xdman/xdm-app
-
+     symlink: $SNAP/usr
+   
 plugs:
   shmem:
     interface: shared-memory
