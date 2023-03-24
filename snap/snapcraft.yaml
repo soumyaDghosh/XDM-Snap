@@ -46,6 +46,9 @@ parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
     plugin: dump
+    override-pull: |
+      craftctl default
+      chmod 0755 ./opt/xdman/xdm-app
     stage-packages:
       - hicolor-icon-theme
       - wget
@@ -60,6 +63,9 @@ parts:
       - libstdc++6
       - zlib1g
       - libgcc-s1
+      - libgdk-pixbuf-2.0-0
+      - libgdk-pixbuf2.0-bin
+      - libgdk-pixbuf2.0-common
       
   
     
