@@ -16,9 +16,6 @@ package-repositories:
   - type: apt
     ppa: tomtomtom/yt-dlp
 
-layout:
-  /usr/bin/xdman:
-    symlink: $SNAP/opt/xdman/xdm-app
 
 plugs:
   shmem:
@@ -27,7 +24,7 @@ plugs:
     
 apps:
   xdm-snap: 
-    command: usr/bin/xdman
+    command: /opt/xdman/xdm-app $@
     extensions: [gnome]
     environment:
       GTK_USE_PORTAL: 1
