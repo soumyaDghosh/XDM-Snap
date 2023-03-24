@@ -2,7 +2,7 @@
 Encoding=UTF-8
 Type=Application
 Terminal=false
-Exec=xdm-snap %U
+Exec=xdm-snap $@
 Name=XDM-Snap
 Comment=Powerfull download accelarator and video downloader
 Categories=Network;
