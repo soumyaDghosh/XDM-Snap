@@ -18,7 +18,7 @@ package-repositories:
 
 layout:
   /usr/bin/xdman:
-    symlink: $SNAP/opt/xdman
+    symlink: $SNAP/opt/xdman/xdm-app
 
 plugs:
   shmem:
