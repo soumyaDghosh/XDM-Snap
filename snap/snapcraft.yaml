@@ -12,10 +12,12 @@ architectures:
   - build-on: amd64
     build-for: amd64
     
-layout:
-  /opt/xdman/xdm-app:
-    symlink: $SNAP/usr
-   
+package-repositories:
+  - type: apt
+    ppa: tomtomtom/yt-dlp
+
+
+
 plugs:
   shmem:
     interface: shared-memory
@@ -47,15 +49,17 @@ parts:
       - hicolor-icon-theme
       - wget
       - curl
-      - libnettle8
-      - libcrypto++8
-      - libhogweed6
-      - libx264-163
-    stage-snaps:
-      - ffmpeg/latest/edge
-      - yt-dlp/latest/stable
+      - yt-dlp
+      - ffmpeg
+      - libgtk-3-0
+      - libc6
+      - libgssapi-krb5-2
+      - libicu70
+      - libssl3
+      - libstdc++6
+      - zlib1g
+      - libgcc-s1
       
-   
   
     
    
