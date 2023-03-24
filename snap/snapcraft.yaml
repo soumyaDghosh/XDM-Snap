@@ -17,9 +17,9 @@ package-repositories:
     ppa: tomtomtom/yt-dlp
 
 layout:
-   /opt/xdman/xdm-app:
-     symlink: $SNAP/usr
-   
+  /usr/bin/xdman:
+    symlink: $SNAP/opt/xdman
+
 plugs:
   shmem:
     interface: shared-memory
@@ -27,8 +27,10 @@ plugs:
     
 apps:
   xdm-snap: 
-    command: opt/xdman/xdm-app
+    command: usr/bin/xdman
     extensions: [gnome]
+    environment:
+      GTK_USE_PORTAL: 1
     common-id: org.xdm.snap 
     plugs:
       - home
