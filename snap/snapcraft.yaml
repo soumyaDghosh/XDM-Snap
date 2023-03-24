@@ -24,7 +24,7 @@ plugs:
     
 apps:
   xdm-snap: 
-    command: /opt/xdman/xdm-app $@
+    command: /opt/xdman/xdm-app $
     extensions: [gnome]
     environment:
       GTK_USE_PORTAL: 1
