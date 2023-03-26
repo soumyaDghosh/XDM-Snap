@@ -28,13 +28,16 @@ apps:
     extensions: [gnome]
     environment:
       GTK_USE_PORTAL: 1
-    #common-id: org.xdm.snap 
+    common-id: org.xdm.snap 
     plugs:
       - home
       - network
+      - network-bind
+      - network-status
       - shmem
       - process-control
       - browser-support
+      - optical-drive
       - pulseaudio
       - audio-playback
       - removable-media
@@ -55,8 +58,8 @@ parts:
       - zlib1g
       - libgcc-s1
       - libgdk-pixbuf-2.0-0
-      - libgdk-pixbuf2.0-bin
       - libgdk-pixbuf2.0-common
+    
     prime:
       - usr/lib/*/libgtk-3-0*
       - usr/lib/*/libc6*
@@ -73,12 +76,10 @@ parts:
     source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
     plugin: dump
     stage-packages:
-      - hicolor-icon-theme
       - wget
-      - curl
       - yt-dlp
       - ffmpeg 
-      
+     
       
   
     
