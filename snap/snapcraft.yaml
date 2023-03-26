@@ -43,18 +43,9 @@ apps:
  
 
 parts:
-  xdm-snap:
-    source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
-    plugin: dump
-    override-pull: |
-      craftctl default
-      chmod 0755 ./opt/xdman/xdm-app
+  libraries:
+    plugin: nil
     stage-packages:
-      - hicolor-icon-theme
-      - wget
-      - curl
-      - yt-dlp
-      - ffmpeg
       - libgtk-3-0
       - libc6
       - libgssapi-krb5-2
@@ -66,6 +57,28 @@ parts:
       - libgdk-pixbuf-2.0-0
       - libgdk-pixbuf2.0-bin
       - libgdk-pixbuf2.0-common
+    prime:
+      - usr/lib/*/libgtk-3-0*
+      - usr/lib/*/libc6*
+      - usr/lib/*/libgssapi-krb5-2*
+      - usr/lib/*/libicu70*
+      - usr/lib/*/libssl3*
+      - usr/lib/*/libstdc++6*
+      - usr/lib/*/zlib1g*
+      - usr/lib/*/libgcc-s1*
+      - usr/lib/*/libgdk-pixbuf-2.0-0*
+      - usr/lib/*/libgdk-pixbuf2.0-common*
+  
+  xdm-snap:
+    source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
+    plugin: dump
+    stage-packages:
+      - hicolor-icon-theme
+      - wget
+      - curl
+      - yt-dlp
+      - ffmpeg 
+      
       
   
     
