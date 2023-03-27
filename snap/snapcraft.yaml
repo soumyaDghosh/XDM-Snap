@@ -28,7 +28,6 @@ apps:
     extensions: [gnome]
     environment:
       GTK_USE_PORTAL: 1
-      XDM_CONFIG_HOME: $SNAP_USER_COMMON
     common-id: org.xdm.snap 
     plugs:
       - home
