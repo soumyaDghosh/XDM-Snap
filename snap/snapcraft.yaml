@@ -27,7 +27,10 @@ apps:
     command: opt/xdman/xdm-app
     extensions: [gnome]
     environment:
-      GTK_USE_PORTAL: 1
+      GTK_USE_PORTAL: '1'
+      SNAP_DESKTOP_RUNTIME: $SNAP/gnome-platform
+      LD_LIBRARY_PATH: ${SNAP_LIBRARY_PATH}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+      PATH: $SNAP/usr/sbin:$SNAP/usr/bin:$SNAP/sbin:$SNAP/bin:$PATH
     common-id: org.xdm.snap 
     plugs:
       - home
@@ -75,11 +78,17 @@ parts:
   xdm-snap:
     source: https://github.com/subhra74/xdm-experimental-binaries/releases/download/8.0.25-beta/xdman_gtk_8.0.25_amd64.deb
     plugin: dump
+    override-pull: |
+      craftctl default
+      chmod 0755 ./opt/xdman/xdm-app
+      rm -rf usr/bin/xdman usr/share/applications/xdm-app.desktop
     stage-packages:
       - wget
       - yt-dlp
       - ffmpeg 
-     
+      - hicolor-icon-theme
+    prime:
+      - opt/xdman/xdm-app 
       
   
     
