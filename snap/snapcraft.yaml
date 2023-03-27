@@ -77,7 +77,6 @@ parts:
     plugin: dump
     override-pull: |
       craftctl default
-      chmod 0755 ./opt/xdman/xdm-app
       rm -rf usr/bin/xdman usr/share/applications/xdm-app.desktop
     stage-packages:
       - wget
