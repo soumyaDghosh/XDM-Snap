@@ -85,8 +85,7 @@ parts:
       - yt-dlp
       - ffmpeg 
       - hicolor-icon-theme
-    prime:
-      - opt/xdman/xdm-app 
+   
       
   
     
