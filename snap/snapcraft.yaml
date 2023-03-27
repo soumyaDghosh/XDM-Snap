@@ -27,10 +27,8 @@ apps:
     command: opt/xdman/xdm-app
     extensions: [gnome]
     environment:
-      GTK_USE_PORTAL: '1'
-      SNAP_DESKTOP_RUNTIME: $SNAP/gnome-platform
-      LD_LIBRARY_PATH: ${SNAP_LIBRARY_PATH}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
-      PATH: $SNAP/usr/sbin:$SNAP/usr/bin:$SNAP/sbin:$SNAP/bin:$PATH
+      GTK_USE_PORTAL: 1
+      XDM_CONFIG_HOME: $SNAP_USER_COMMON
     common-id: org.xdm.snap 
     plugs:
       - home
