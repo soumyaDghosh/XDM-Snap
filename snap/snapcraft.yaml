@@ -46,9 +46,6 @@ apps:
   xdm-snap: 
     command: opt/xdman/xdm-app
     extensions: [gnome]
-    environment:
-      GTK_USE_PORTAL: 1
-      HOME: $SNAP_USER_COMMON
     common-id: org.xdm.snap 
     plugs:
       - home
