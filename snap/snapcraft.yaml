@@ -52,6 +52,7 @@ parts:
       - libgssapi-krb5-2
       - libicu70
       - libssl3
+      - liblttng-ust1
       - libstdc++6
       - zlib1g
       - libgcc-s1
@@ -64,6 +65,7 @@ parts:
       - usr/lib/*/libgssapi-krb5-2*
       - usr/lib/*/libicu70*
       - usr/lib/*/libssl3*
+      - usr/lib/*/liblttng-ust1*
       - usr/lib/*/libstdc++6*
       - usr/lib/*/zlib1g*
       - usr/lib/*/libgcc-s1*
