@@ -21,42 +21,22 @@ plugs:
   shmem:
     interface: shared-memory
     private: true
-  desktop:
-    mount-host-font-cache: false
-  gtk-3-themes:
-    interface: content
-    target: $SNAP/data-dir/themes
-    default-provider: gtk-common-themes
-  icon-themes:
-    interface: content
-    target: $SNAP/data-dir/icons
-    default-provider: gtk-common-themes
-  sound-themes:
-    interface: content
-    target: $SNAP/data-dir/sounds
-    default-provider: gtk-common-themes
-  gnome-42-2204:
-    interface: content
-    target: $SNAP/gnome-platform
-    default-provider: gnome-42-2204
-    
-    
+  
     
 apps:
   xdm-snap: 
     command: opt/xdman/xdm-app
     extensions: [gnome]
-    common-id: org.xdm.snap 
+    environment:
+      TMPDIR: $XDG_RUNTIME_DIR
+      GTK_USE_PORTAL: '1'
+       
     plugs:
       - home
       - network
       - network-bind
-      - network-status
       - shmem
       - process-control
-      - browser-support
-      - optical-drive
-      - pulseaudio
       - audio-playback
       - removable-media
       - unity7
