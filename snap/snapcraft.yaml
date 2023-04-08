@@ -3,7 +3,7 @@ base: core22
 version: '8.0.25'
 summary: XDM Is Free and Advanced Download Manger for Linux
 description: |
-  XDM Is a powerful Free and Advanced Download Manger For Linux supporting several filetypes and contents..
+  XDM Is a Free and Advanced Download Manger For Linux supporting several filetypes and contents..
 grade: stable
 confinement: strict
 compression: lzo
@@ -25,7 +25,7 @@ plugs:
     
 apps:
   xdm-snap: 
-    command: opt/xdman/xdm-app
+    command: opt/xdman/xdm-app --no-sandbox --disable-seccomp-filter-sandbox
     extensions: [gnome]
     environment:
       TMPDIR: $XDG_RUNTIME_DIR
