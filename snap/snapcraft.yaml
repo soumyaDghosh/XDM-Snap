@@ -11,10 +11,8 @@ compression: lzo
 architectures:
   - build-on: amd64
     build-for: amd64
-  
-    
 apps:
-  xdm-snap: 
+  xdm-snap:
     command: opt/xdman/xdm-app --no-sandbox --disable-seccomp-filter-sandbox
     extensions: [gnome]
     environment:
@@ -33,29 +31,3 @@ parts:
       sed -e 's|Exec=env GTK_USE_PORTAL=1 /opt/xdman/xdm-app %U|Exec=/opt/xdman/xdm-app %U|' -i usr/share/applications/xdm-app.desktop
     stage-packages:
       - yt-dlp
-      - ffmpeg 
-   
-      
-  
-    
-   
-    
-    
-      
-    
-      
-     
-  
-      
-      
-      
-      
-    
-      
-   
-  
-  
-      
-    
-       
-  
